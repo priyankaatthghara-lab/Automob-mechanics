@@ -1,20 +1,33 @@
 *{
-    padding: 0%;
-    margin: 0%;
-    border: 0%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    padding-top: 60px;
+}
+h1,h3{
+    font-family: 'Montserrat', sans-serif;
 }
 #navbar{
     position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #074A62;
 }
 #navbar ul{
     height: 70px;
     width: 100%;
     display: flex;
-    background-color: #35858E;
+   
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    color: white;
 }
 #leftpart{
     display: flex;
@@ -32,18 +45,157 @@
 #Home{
     height: 100vh;
     width: 100%;
-   background-image:url("assets/home1.jpg");
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-  
+   overflow: hidden;
+   position: relative;
  
+}
+.slide{
+  
+    background-size: cover;
+   background-position: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+    opacity: 0;
+   animation: fade 12s infinite ease-in-out;
+}
+.s1{
+    background-image: url(assets/home1.jpg);
+      animation-delay: 0s;
+}
+.s2{
+    background-image: url(assets/home2.jpg) ;
+      animation-delay: 4s;
+}
+.s3{
+    background-image: url(assets/home.jpg) ;
+    animation-delay: 8s;
+}
+@keyframes fade{
+   0% {opacity: 0;}
+   10%{opacity: 1;}
+   30%{opacity: 1;}
+   40%{opacity: 0;}
+   100%{opacity: 0;}
 }
 
 .content{
     position: absolute;
+    display: flex;
+    flex-direction: column;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+     color: white;
+     text-align: center;
+    
+     width: 40%;
+}
+button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: auto;
+    align-self: center;
+    background-color:#D64460;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 6px;
+    color: white;
    
+}
+.content h3{
+    margin-top: 15px;
+}
+ul li a{
+    color: white;
+}
+footer{
+    
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   background-color: #074A62;
+   color: white;
+
+}
+#navbar a:hover{
+    background-color: #D64460;
+}
+#exploreservices{
+    width: 100%;
+    height: 100vh;
+   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     padding: 15px; 
+}
+#description{
+    
+    height: 70px;
+    width: 60%;
+    word-spacing: 10px;
+    font-weight: 500 ;
+    font-size: larger;
+    text-align-last: center;
+   
+    
+   
+}
+#middlecontent{
+     margin-top: 20px;
+   
+     height: fit-content;
+     display: flex;
+     width: 75%;
+}
+#middlecontent img{
+    height: 90%;
+}
+#services{
+   
+    margin-left: 30px;
+    padding: 25px;
+   
+    
+
+}
+#line{
+    font-size: 20px;
+}
+.servicesection {
+   display: flex;
+   gap: 10px;
+   margin-top: 30px;
+   padding: 15px;
+}
+.number{
+    width: 40px;
+    height: 40px;
+    border:2px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+
+}
+#book{
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #D84E19;
+    border-radius: 10px;
+}
+#servicecenter div{
+ font-size: medium;
+    font-weight: 500;
 }
